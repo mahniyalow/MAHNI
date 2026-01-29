@@ -1,0 +1,38 @@
+html {
+    background-color: aliceblue;
+    font-size:25px;
+}
+/* typography */
+p {
+    background-color: azure;
+    /* border is a shorthand prop for border-width, border-style, border-color */
+    border: 10px dashed rgb(255, 255, 255);
+    text-align:right;
+
+    /* 
+        1 value: all sides
+
+        2 values: 1st value = top/bottom, 2nd value =. left/right 
+    */
+    padding:10px 50px 70px 90px;
+    margin:50px 50px 50px 90px;
+    line-height: 10px;
+
+}
+
+h1 {
+    color:rgb(43, 89, 175);
+    text-align: center;
+    padding:10px;
+ 
+
+}
+.special {
+    background-color: yellowgreen;
+    font-size:50px;
+    border-radius: 30%;
+}
+.center-text {
+    text-align: center;
+    padding:20px;
+}
