@@ -59,3 +59,9 @@
         right:40px;
         margin:0;
     }
+
+    .sticky {
+        background-color:greenyellow;
+        position:sticky;
+        bottom:30px;
+    }
