@@ -1,0 +1,184 @@
+    * {
+       box-sizing:border-box; 
+    }
+
+    body {
+      margin:0;
+    }
+
+
+
+.container {
+   height:100vh;
+  
+   display:flex;
+   justify-content:space-evenly;
+   align-items:center;
+   position:relative;
+   overflow:hidden;
+   animation: bgColor 8s alternate-reverse infinite;
+}
+
+@keyframes bgColor {
+   0% {
+      background-color: black;
+   }
+   33% {
+      background-color: #333333;
+   }
+   66% {
+      background-color: #999999;
+   }
+   100% {
+      background-color: white;
+   }
+}
+
+
+.mover1 {
+   width: 600px;
+   position:absolute;
+   bottom:150px;
+   left:0;
+   animation: move 13.7s infinite;
+}
+
+@keyframes move {
+   0% {
+      left:-600px;
+   }
+   100% {
+      left:100%;
+   }
+}
+
+.mover2 {
+   width:600px;
+   position:absolute;
+   top:-5%;
+   right:0;
+   animation: move2 9.4s infinite;
+}
+
+@keyframes move2 {
+   0% {
+      right:-600px;
+   }
+   100% {
+      right:100%;
+   }
+}
+
+.mover3 {
+   width:600px;
+   position:absolute;
+   top:0%;
+   left:0;
+   animation: move 11.2s infinite;
+}
+
+.mover4 {
+   width:600px;
+   position:absolute;
+   top:15%;
+   right:0;
+   animation: move2 22.5s infinite;
+}
+
+.mover5 {
+   width: 600px;
+   position:absolute;
+   top:30%;
+   left:0;
+   animation: move 17.3s infinite;
+}
+
+.mover6 {
+   width:600px;
+   position:absolute;
+   top:45%;
+   right:0;
+   animation: move2 12.1s infinite;
+}
+
+.mover7 {
+   width:600px;
+   position:absolute;
+   top:60%;
+   left:0;
+   animation: move 19.8s infinite;
+}
+
+.mover8 {
+   width:600px;
+   position:absolute;
+   top:75%;
+   right:0;
+   animation: move2 10.6s infinite;
+}
+
+.mover9 {
+   width:600px;
+   position:absolute;
+   top:-5%;
+   left:0;
+   animation: move 23.4s infinite;
+}
+
+.mover10 {
+   width:600px;
+   position:absolute;
+   top:10%;
+   right:0;
+   animation: move2 13.3s infinite;
+}
+
+.mover11 {
+   width:600px;
+   position:absolute;
+   top:20%;
+   left:0;
+   animation: move 8.9s infinite;
+}
+
+.mover12 {
+   width:600px;
+   position:absolute;
+   top:35%;
+   right:0;
+   animation: move2 21.7s infinite;
+}
+
+.mover13 {
+   width:600px;
+   position:absolute;
+   top:50%;
+   left:0;
+   animation: move 14.4s infinite;
+}
+
+.mover14 {
+   width:600px;
+   position:absolute;
+   top:65%;
+   right:0;
+   animation: move2 11.5s infinite;
+}
+
+.mover15 {
+   width:600px;
+   position:absolute;
+   top:0%;
+   left:0;
+   animation: move 24.1s infinite;
+}
+
+.mover16 {
+   width:600px;
+   position:absolute;
+   top:70%;
+   right:0;
+   animation: move2 12.8s infinite;
+}
+
+

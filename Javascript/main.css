@@ -1,0 +1,58 @@
+    * {
+       box-sizing:border-box; 
+    }
+
+      body {
+         background: rgb(153, 153, 153);
+         transition: background .3s;
+      }
+
+      .dark {
+         background: rgb(66, 66, 66);
+      }
+
+    .menu {
+      background:  lightblue;
+      font-size: 150%;
+      height:100vh;
+      width: 300px;
+      position: fixed;
+      Right:-300px;
+      top:0;
+      opacity: 0;
+
+      
+      /* display cant animate with */
+
+      padding:20px;
+      text-align: center;
+
+      transition: right .3s,
+      opacity .3s .1s, background .3s;
+    }
+
+
+   .active {
+      right:0;
+      opacity:1;
+   }
+
+      .gear {
+         background-color: lightblue;
+         width: 100px;
+         height: 100px;
+         position: fixed;
+         bottom:30px;
+         left:30px;
+
+         transition: rotate .3s;
+         background: .3s;
+      }
+
+      .spin {
+         rotate:180deg;
+      }
+
+      .glow {
+        background: rgb(217, 255, 185)
+      }
