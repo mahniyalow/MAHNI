@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html style="background-color: rgb(243, 243, 243);">
+    <head>
+    <link rel="stylesheet" href="main.css">
+        <title>function</title>
+
+    </head>
+    
+    <body>
+  
+    <audio id="audio1" loop style="display:none;"><source src="Music/key.wav"></audio>
+    <audio id="audio2" loop style="display:none;"><source src="Music/project-148.wav"></audio>
+    <audio id="audio3" loop style="display:none;"><source src="Music/afro.wav"></audio>
+    <audio id="audio4" loop style="display:none;"><source src="Music/synth.mp3"></audio>
+    <audio id="audio5" loop style="display:none;"><source src="Music/project 2.wav"></audio>
+    <audio id="audio6" loop style="display:none;"><source src="Music/house1.wav"></audio>
+    <audio id="audio7" loop style="display:none;"><source src="Music/ding.wav"></audio>
+    <audio id="audio8" loop style="display:none;"><source src="Music/hous2.wav"></audio>
+    <audio id="audio9" loop style="display:none;"><source src="Music/monsterwave.wav"></audio>
+    <audio id="audio10" loop style="display:none;"><source src="Music/birds.mp3"></audio>
+    <audio id="audio11" loop style="display:none;"><source src="Music/flute.wav"></audio>
+    <audio id="audio12" loop style="display:none;"><source src="Music/woaam.wav"></audio>
+    <audio id="audio13" loop style="display:none;"><source src="Music/drumz.wav"></audio>
+    <audio id="audio14" loop style="display:none;"><source src="Music/junky.wav"></audio>
+    <audio id="audio15" loop style="display:none;"><source src="Music/glitter.mp3"></audio>
+    <audio id="audio16" loop style="display:none;"><source src="Music/keykey.wav"></audio>
+
+    <div class="sound-circle" onclick="toggleAudio('audio1')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio2')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio3')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio4')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio5')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio6')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio7')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio8')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio9')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio10')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio11')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio12')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio13')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio14')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio15')"></div>
+    <div class="sound-circle" onclick="toggleAudio('audio16')"></div>
+
+    <script>
+        function toggleAudio(id) {
+            var audio = document.getElementById(id);
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+
+    </body>
+
+    
+
+
+
+
+
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html style="background-color: rgb(61, 61, 61);">
+    <head>
+    <link rel="stylesheet" href="main.css">
+        <title>function</title>
+
+    </head>
+    
+    <body>
+  
+    <audio id="audio1" loop style="display:none;"><source src="Music/key.wav"></audio>
+    <audio id="audio2" loop style="display:none;"><source src="Music/project-148.wav"></audio>
+    <audio id="audio3" loop style="display:none;"><source src="Music/afro.wav"></audio>
+    <audio id="audio4" loop style="display:none;"><source src="Music/synth.mp3"></audio>
+    <audio id="audio5" loop style="display:none;"><source src="Music/project 2.wav"></audio>
+    <audio id="audio6" loop style="display:none;"><source src="Music/house1.wav"></audio>
+    <audio id="audio7" loop style="display:none;"><source src="Music/ding.wav"></audio>
+    <audio id="audio8" loop style="display:none;"><source src="Music/hous2.wav"></audio>
+    <audio id="audio9" loop style="display:none;"><source src="Music/monsterwave.wav"></audio>
+    <audio id="audio10" loop style="display:none;"><source src="Music/birds.mp3"></audio>
+    <audio id="audio11" loop style="display:none;"><source src="Music/flute.wav"></audio>
+    <audio id="audio12" loop style="display:none;"><source src="Music/woaam.wav"></audio>
+    <audio id="audio13" loop style="display:none;"><source src="Music/drumz.wav"></audio>
+    <audio id="audio14" loop style="display:none;"><source src="Music/junky.wav"></audio>
+    <audio id="audio15" loop style="display:none;"><source src="Music/glitter.mp3"></audio>
+    <audio id="audio16" loop style="display:none;"><source src="Music/keykey.wav"></audio>
+
+    <div id="circle1" class="sound-circle" onclick="toggleAudio('audio1', 'circle1')"></div>
+    <div id="circle2" class="sound-circle" onclick="toggleAudio('audio2', 'circle2')"></div>
+    <div id="circle3" class="sound-circle" onclick="toggleAudio('audio3', 'circle3')"></div>
+    <div id="circle4" class="sound-circle" onclick="toggleAudio('audio4', 'circle4')"></div>
+    <div id="circle5" class="sound-circle" onclick="toggleAudio('audio5', 'circle5')"></div>
+    <div id="circle6" class="sound-circle" onclick="toggleAudio('audio6', 'circle6')"></div>
+    <div id="circle7" class="sound-circle" onclick="toggleAudio('audio7', 'circle7')"></div>
+    <div id="circle8" class="sound-circle" onclick="toggleAudio('audio8', 'circle8')"></div>
+    <div id="circle9" class="sound-circle" onclick="toggleAudio('audio9', 'circle9')"></div>
+    <div id="circle10" class="sound-circle" onclick="toggleAudio('audio10', 'circle10')"></div>
+    <div id="circle11" class="sound-circle" onclick="toggleAudio('audio11', 'circle11')"></div>
+    <div id="circle12" class="sound-circle" onclick="toggleAudio('audio12', 'circle12')"></div>
+    <div id="circle13" class="sound-circle" onclick="toggleAudio('audio13', 'circle13')"></div>
+    <div id="circle14" class="sound-circle" onclick="toggleAudio('audio14', 'circle14')"></div>
+    <div id="circle15" class="sound-circle" onclick="toggleAudio('audio15', 'circle15')"></div>
+    <div id="circle16" class="sound-circle" onclick="toggleAudio('audio16', 'circle16')"></div>
+
+    <script>
+        function toggleAudio(audioId, circleId) {
+            var audio = document.getElementById(audioId);
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        window.onload = function() {
+            var colors = ['yellow', 'black', 'aqua', 'orange', 'red', 'indigo', 'white', 'green', 'blue', 'lightblue', 'lightyellow', 'brown', 'magenta', 'purple', 'lightpink', 'grey'];
+            var positions = JSON.parse(localStorage.getItem('circlePositions2')) || [];
+            if (positions.length === 0) {
+                for (var i = 1; i <= 16; i++) {
+                    var x, y, overlapping;
+                    do {
+                        x = Math.random() * 1800; // 0-1800 for wider spread
+                        y = Math.random() * 1000; // 0-1000 for taller spread
+                        overlapping = false;
+                        for (var pos of positions) {
+                            var dx = x - pos.x;
+                            var dy = y - pos.y;
+                            var distance = Math.sqrt(dx*dx + dy*dy);
+                            if (distance < 70) { // increased min distance for more spread
+                                overlapping = true;
+                                break;
+                            }
+                        }
+                    } while (overlapping);
+                    positions.push({x: x, y: y});
+                }
+                localStorage.setItem('circlePositions', JSON.stringify(positions));
+            }
+            for (var i = 1; i <= 16; i++) {
+                var circle = document.getElementById('circle' + i);
+                circle.style.backgroundColor = colors[i-1];
+                circle.style.position = 'absolute';
+                circle.style.top = positions[i-1].y + 'px';
+                circle.style.left = positions[i-1].x + 'px';
+            }
+        };
+    </script>
+
+    </body>
+
+    
+
+
+
+
+
+
+</html>

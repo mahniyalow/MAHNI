@@ -1,0 +1,13 @@
+html body {
+    min-height:150vh;
+    min-width: 2000px;
+}
+
+.sound-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
