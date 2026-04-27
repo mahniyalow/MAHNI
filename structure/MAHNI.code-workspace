@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "MAHNI",
+			"path": ".."
+		},
+		{
+			"name": "jquery",
+			"path": "../../../Downloads/jquery"
+		}
+	],
+	"settings": {}
+}
